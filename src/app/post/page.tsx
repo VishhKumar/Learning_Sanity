@@ -29,10 +29,10 @@ export default async function BlogListPage() {
               )}
               <div className="p-4">
                 <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-                <p className="text-sm text-gray-600">
+              
                   <PortableText value={post.body} />
                   {/* {post.description?.slice(0, 100) || 'No description available.'} */}
-                </p>
+                
               </div>
             </div>
           </Link>
