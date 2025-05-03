@@ -3,7 +3,7 @@ import client from '../lib/sanity'
 import { postsQuery } from '../lib/queries'
 import { PortableText } from 'next-sanity'
 
-export default async function BlogListPage() {
+ async function BlogListPage() {
   const posts = await client.fetch(postsQuery)
 
   console.log("fetched posts", posts)
@@ -46,3 +46,6 @@ export default async function BlogListPage() {
     </>
   )
 }
+
+
+export default BlogListPage

@@ -21,8 +21,11 @@ const query = `
   }
 `
 
-export default async function PostPage({ params }: {params:{slug:string}}) {
+async function PostPage({ params }: {params:Promise<{slug:string}>;}) {
+  debugger
   const {slug} = await params 
+  console.log("params", slug)
+
   const post = await client.fetch(query, {slug})
 
   if (!post) return notFound()
@@ -48,3 +51,5 @@ export default async function PostPage({ params }: {params:{slug:string}}) {
     </main>
   )
 }
+
+export default PostPage

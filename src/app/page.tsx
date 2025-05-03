@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import BlogListPage from "./post/page";
 
 export default function Home() {
